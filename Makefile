@@ -1,4 +1,4 @@
-.PHONY: default fmt clean build release
+.PHONY: default fmt clean build release test
 
 default: build
 
@@ -13,3 +13,7 @@ build:
 
 release:
 	cargo build --release
+
+test:
+	cargo fmt --check
+	cargo test
